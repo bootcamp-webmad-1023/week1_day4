@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function sayHi(action) {
+            console.log('HOLA!')
+            console.log('EL PARÁMETRO ES DE TIPO', typeof action, 'Y LA VOY A INVOCAR DEBAJO JEJE')
+            action()
+        }
+
+        function sayBye() {
+            console.log('ADIOS!')
+        }
+
+        sayHi(sayBye)
+
+
+
+
+
+
+
+        // Callback example 2
+        function applyNormalVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1.21, '(IVA regular)')
+        }
+        function applyReducedVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1.1, '(IVA reducido)')
+        }
+        function applyExentVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1, '(IVA exento)')
+        }
+
+
+        function getTotal(cost, callback) {
+            const benefitPart = cost * .1
+            const subtotal = cost + benefitPart
+            callback(subtotal)
+        }
+
+        getTotal(100, applyExentVAT)
+        getTotal(100, applyNormalVAT)
+        getTotal(100, applyReducedVAT)
+
+
+    </script>
+</body>
+
+</html>

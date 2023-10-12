@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // function parameters
+        function sayHi(firstName, lastName) {
+            console.log(`¡Hola, ${firstName} ${lastName}!`)
+        }
+
+
+        // function arguments
+        sayHi('Valentina', 'Lozano')
+        sayHi('Lucía', 'Sanz')
+
+
+
+
+
+
+        function printBookingInfo(customerData, arrivalDate, totalNights, totalCost, roomType = 'Standard') {
+            let bookingText = `Estimado/a ${customerData.firstName} ${customerData.lastName}. `
+            bookingText += `Su reserva para el día ${arrivalDate} está confirmada. `
+            bookingText += `Un total de ${totalNights} noches en una habitación ${roomType} - precio ${totalCost}€.`
+
+            console.log(bookingText)
+        }
+
+        printBookingInfo({ firstName: 'German', lastName: 'Álvarez' }, '11/11/2023', 4, 654)
+        printBookingInfo({ firstName: 'Lucía', lastName: 'Sanz' }, '20/09/2023', 2, 2500, 'Suite')
+
+
+    </script>
+</body>
+
+</html>

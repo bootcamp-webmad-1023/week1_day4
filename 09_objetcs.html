@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const person = {
+            name: 'Germán Álvarez',
+            weight: 86,
+            height: 1.89,
+            celiac: false,
+            job: {
+                position: 'Lead Instructor',
+                salary: 1000,
+                company: 'Ironhack'
+            },
+            hobbies: ['sky', 'rave', 'coding', 'walking'],
+            subscriptions: [
+                { provider: 'Amazon music', cost: 9.99 },
+                { provider: 'HBO', cost: 12.99 },
+                { provider: 'Share Now', cost: 39 }
+            ]
+        }
+
+        console.log('Un objeto es de tipo', typeof person)
+
+        console.log('El objeto completo:', person)
+
+        // Access (getter, common)
+        console.log('Me llamo', person.name, 'y trabajo en', person.job.company)
+
+        // Access (getter, brackets)
+        console.log('Mido', person['height'], 'metros')
+
+        // Access (setter)
+        person.celiac = true
+
+        // Iteration (for)
+        for (let i = 0; i < person.hobbies.length; i++) {
+            console.log('Esto me gusta ->', person.hobbies[i])
+        }
+
+        // Iteration (forEach)
+        person.hobbies.forEach(function (eachHobby) {
+            console.log('Esto también me gusta ->', eachHobby)
+        })
+
+        // Iteration (forEach)
+        let totalCost = 0
+
+        person.subscriptions.forEach(function (eachSubscription) {
+            totalCost += eachSubscription.cost
+            console.log('Estoy pagando', eachSubscription.cost, 'por', eachSubscription.provider)
+        })
+
+        console.log('En total me gasto', totalCost, 'al mes.... D:')
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

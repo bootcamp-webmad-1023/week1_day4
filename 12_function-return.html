@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function composeBookingInfo(customerData, arrivalDate, totalNights, totalCost, roomType = 'Standard') {
+            let bookingText = `Estimado/a ${customerData.firstName} ${customerData.lastName}. `
+            bookingText += `Su reserva para el día ${arrivalDate} está confirmada. `
+            bookingText += `Un total de ${totalNights} noches en una habitación ${roomType} - precio ${totalCost}€.`
+
+            return bookingText
+        }
+
+        const booking1 = composeBookingInfo({ firstName: 'German', lastName: 'Álvarez' }, '11/11/2023', 4, 654)
+        const booking2 = composeBookingInfo({ firstName: 'Lucía', lastName: 'Sanz' }, '20/09/2023', 2, 2500, 'Suite')
+
+        console.log(booking1)
+        document.write(`<h2>${booking2}</h2>`)
+
+
+
+        console.log('------')
+
+
+
+        const isMultiple = function (val1, val2) {
+
+            console.log('A MI SÍ ME VES JEJEJ')
+
+            if (val1 % val2 === 0) {
+                return true
+            } else {
+                return false
+            }
+
+            // un retorno supone la detención de la función, esto nunca saldrá
+            console.log('A MI NO ME VES JEJEJ')
+        }
+
+        console.log('¿Son múltiplos 10 y 5?', isMultiple(10, 5))
+        console.log('¿Son múltiplos 4 y 33?', isMultiple(4, 33))
+
+
+
+
+        console.log('------')
+
+
+
+        function calculateTotalPrice(cost, taxPercent) {
+
+            const benefit = .1
+            const benefitPart = cost * benefit
+            const taxPart = subtotal * taxPercent
+
+            const subtotal = benefitPart + taxPart
+
+            return subtotal + cost
+        }
+
+
+        const price1 = calculateTotalPrice(10, .21)
+
+        console.log('EL total es', price1)
+
+
+    </script>
+</body>
+
+</html>

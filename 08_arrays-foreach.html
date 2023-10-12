@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const drinks = ['Agua', 'Kas', 'Cerveza', 'Coca-cola', 'Monster', 'Cacaolat']
+
+
+        // Step 1 -> for iteration
+        for (let i = 0; i < drinks.length; i++) {
+            console.log('Una bebida es', drinks[i])
+        }
+
+
+        // Step 2 -> forEach iteration (nominal fn)
+        function showDrinkName(eachDrink) {
+            console.log('HOLA HOLA NO MUERDO :3 Y TENGO ESTA BEBIDA HEHJEHEJE ->', eachDrink)
+        }
+
+        drinks.forEach(showDrinkName)
+
+
+        // Step 3 -> forEach iteration (anonymous fn)
+        drinks.forEach(function (eachDrink) {
+            console.log('Ahora con una función anónima O_O ->', eachDrink)
+        })
+
+
+        // Step 4 -> forEach iteration (arrow fn)
+        drinks.forEach(eachDrink => console.log('Ahora una función flecha ò_Ó ->', eachDrink))
+
+    </script>
+</body>
+
+</html>
